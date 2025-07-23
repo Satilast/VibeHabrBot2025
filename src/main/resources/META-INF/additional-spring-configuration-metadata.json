@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "telegrambots.enabled",
+      "type": "java.lang.String",
+      "description": "Параметр для отключения автоконфигурации Telegram приложения."
+  }
+] }

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: VibeHabrBot2025
+  profiles:
+    active: default
+
+telegram:
+  bot:
+    username: VibeHabrContestBot
+    token: ${TELEGRAM_BOT_TOKEN:}
+
+telegrambots:
+  enabled: false
