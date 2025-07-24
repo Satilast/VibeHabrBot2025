@@ -18,7 +18,7 @@ class CardThree(
         entities
             .filter { it.type == "mention" }
             .map { msg.text.substring(it.offset, it.offset + it.length) }
-            .filter { participantsStateService.getScoreIgnored().contains(it) }
+            .filter { !participantsStateService.getScoreIgnored().contains(it) }
             .forEach { mention -> addPoints(mention, msg) }
 
     }
