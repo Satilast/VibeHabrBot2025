@@ -25,7 +25,7 @@ class PrivateCommandHandlerService(
             senderService.sendMessage(chatId, "Бот не запущен. Для запуска бота выполните команду /start")
             return
         }
-        if (!msg.text.startsWith("/")) return
+        if (msg.text == null || !msg.text.startsWith("/")) return
         val args = msg.text.split(" ")
         val commandName = args[0]
         val command = commands[commandName]

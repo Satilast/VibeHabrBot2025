@@ -16,7 +16,7 @@ class GroupCommandHandlerService(
         .collect(toMap(GroupCommand::getName, Function.identity()))
 
     fun handle(msg: Message) {
-        if (!msg.text.startsWith("/")) return
+        if (msg.text == null || !msg.text.startsWith("/")) return
         val args = msg.text.split(" ")
         val commandName = args[0]
         val command = commands[commandName]

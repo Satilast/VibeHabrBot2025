@@ -10,7 +10,7 @@ class StartCommandHandlerService(
 ) {
 
     fun handle(msg: Message) {
-        if (!msg.text.equals("/start")) return
+        if (msg.text == null || !msg.text.equals("/start")) return
         command.execute(msg)
     }
 }
